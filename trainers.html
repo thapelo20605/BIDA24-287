@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Trainers - Mari Fitness</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         .trainer-card {
@@ -34,7 +31,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-3" href="index.html">
@@ -57,7 +53,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="bg-primary text-white py-5">
         <div class="container py-4 text-center">
             <h1 class="display-4 fw-bold mb-3">Meet Our Trainers</h1>
@@ -65,9 +60,7 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container my-5">
-        <!-- Trainer Filter -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="btn-group w-100" role="group">
@@ -80,9 +73,7 @@
             </div>
         </div>
 
-        <!-- Trainer Cards -->
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-            <!-- Manich Ray -->
             <div class="col" id="manich">
                 <div class="card h-100 trainer-card strength" onclick="revealWeapon('manich')">
                     <img src="images/trainer-manich.jpg" class="card-img-top trainer-img" alt="Manich Ray">
@@ -101,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Cheki Babushka -->
             <div class="col" id="cheki">
                 <div class="card h-100 trainer-card cardio" onclick="revealWeapon('cheki')">
                     <img src="images/trainer-cheki.jpg" class="card-img-top trainer-img" alt="Cheki Babushka">
@@ -120,7 +110,6 @@
                 </div>
             </div>
 
-            <!-- Moffat Bfax -->
             <div class="col" id="moffat">
                 <div class="card h-100 trainer-card hiit" onclick="revealWeapon('moffat')">
                     <img src="images/trainer-moffat.jpg" class="card-img-top trainer-img" alt="Moffat Bfax">
@@ -139,7 +128,6 @@
                 </div>
             </div>
 
-            <!-- Monk Fred -->
             <div class="col" id="monk">
                 <div class="card h-100 trainer-card flexibility" onclick="revealWeapon('monk')">
                     <img src="images/trainer-monk.jpg" class="card-img-top trainer-img" alt="Monk Fred">
@@ -158,7 +146,6 @@
                 </div>
             </div>
 
-            <!-- Maps Pearl -->
             <div class="col" id="maps">
                 <div class="card h-100 trainer-card cardio" onclick="revealWeapon('maps')">
                     <img src="images/trainer-maps.jpg" class="card-img-top trainer-img" alt="Maps Pearl">
@@ -177,7 +164,6 @@
                 </div>
             </div>
 
-            <!-- Join Our Team -->
             <div class="col">
                 <div class="card h-100 border-danger">
                     <div class="card-body text-center d-flex flex-column justify-content-center">
@@ -192,7 +178,6 @@
             </div>
         </div>
 
-        <!-- Trainer Schedule -->
         <section class="mb-5">
             <div class="card">
                 <div class="card-header bg-danger text-white">
@@ -268,7 +253,6 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="bg-dark text-white p-5 rounded-3 text-center">
             <h2 class="fw-bold mb-3">Ready to Train With the Best?</h2>
             <p class="lead mb-4">Get personalized attention from our expert trainers</p>
@@ -277,7 +261,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
@@ -329,17 +312,14 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Reveal secret weapon when clicking trainer card
         function revealWeapon(trainer) {
             const weapon = document.getElementById(`${trainer}-weapon`);
             weapon.style.display = weapon.style.display === 'none' ? 'block' : 'none';
         }
 
-        // Filter trainers by specialty
         function filterTrainers(specialty) {
             // Update active button
             document.querySelectorAll('.btn-group button').forEach(btn => {
@@ -347,7 +327,6 @@
             });
             event.target.classList.add('active');
             
-            // Filter trainers
             const trainers = document.querySelectorAll('.trainer-card');
             trainers.forEach(trainer => {
                 const trainerWrapper = trainer.closest('.col');
@@ -359,7 +338,6 @@
             });
         }
 
-        // Highlight trainer if coming from classes.html
         document.addEventListener('DOMContentLoaded', function() {
             if (window.location.hash) {
                 const target = document.querySelector(window.location.hash);
@@ -367,7 +345,6 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                     target.classList.add('highlight');
                     
-                    // Remove highlight after animation
                     setTimeout(() => {
                         target.classList.remove('highlight');
                     }, 3000);

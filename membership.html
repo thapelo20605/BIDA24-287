@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership Plans - Mari Fitness</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         .membership-card {
@@ -49,7 +46,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-3" href="index.html">
@@ -72,7 +68,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="bg-primary text-white py-5">
         <div class="container py-4 text-center">
             <h1 class="display-4 fw-bold mb-3">Membership Plans</h1>
@@ -80,9 +75,7 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container my-5">
-        <!-- Membership Plans -->
         <section class="mb-5">
             <div class="text-center mb-5">
                 <div class="btn-group" role="group">
@@ -94,7 +87,6 @@
             </div>
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!-- Bronze Plan -->
                 <div class="col">
                     <div class="card h-100 membership-card" onclick="selectPlan('bronze')" id="bronze-card">
                         <div class="card-body text-center py-4">
@@ -114,7 +106,6 @@
                     </div>
                 </div>
 
-                <!-- Silver Plan -->
                 <div class="col">
                     <div class="card h-100 membership-card position-relative" onclick="selectPlan('silver')" id="silver-card">
                         <span class="popular-tag">MOST POPULAR</span>
@@ -135,7 +126,6 @@
                     </div>
                 </div>
 
-                <!-- Gold Plan -->
                 <div class="col">
                     <div class="card h-100 membership-card" onclick="selectPlan('gold')" id="gold-card">
                         <div class="card-body text-center py-4">
@@ -158,7 +148,6 @@
             </div>
         </section>
 
-        <!-- Payment Methods (Hidden until plan is selected) -->
         <section class="mb-5 payment-methods" id="payment-methods">
             <div class="card">
                 <div class="card-header bg-danger text-white">
@@ -219,7 +208,6 @@
             </div>
         </section>
 
-        <!-- Membership Benefits -->
         <section class="mb-5">
             <div class="card">
                 <div class="card-header bg-dark text-white">
@@ -265,7 +253,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="mb-5">
             <h3 class="text-center mb-4">Membership FAQ</h3>
             <div class="accordion" id="membershipFAQ">
@@ -308,7 +295,6 @@
             </div>
         </section>
 
-        <!-- Free Trial CTA -->
         <section class="bg-light p-5 rounded-3 text-center">
             <h2 class="fw-bold mb-3">Not Ready to Commit?</h2>
             <p class="lead mb-4">Try us risk-free with our 7-day trial</p>
@@ -316,7 +302,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
@@ -368,11 +353,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Global variables to store selected plan
         let selectedPlan = null;
         const plans = {
             bronze: {
@@ -407,27 +390,21 @@
                 ]
             }
         };
-
-        // Select membership plan
-        function selectPlan(plan) {
-            // Remove selected class from all cards
+        
+         function selectPlan(plan) 
             document.querySelectorAll('.membership-card').forEach(card => {
                 card.classList.remove('selected');
             });
             
-            // Add selected class to clicked card
             document.getElementById(`${plan}-card`).classList.add('selected');
             
-            // Store selected plan
             selectedPlan = plan;
             
-            // Update payment section
             document.getElementById('selected-plan-name').textContent = plans[plan].name;
             document.getElementById('summary-plan').textContent = `${plans[plan].name} Membership`;
             document.getElementById('summary-price').textContent = `${plans[plan].price}/month`;
             document.getElementById('summary-total').textContent = plans[plan].price;
             
-            // Update features list
             const featuresList = document.getElementById('summary-features');
             featuresList.innerHTML = '';
             plans[plan].features.forEach(feature => {
@@ -436,35 +413,24 @@
                 featuresList.appendChild(li);
             });
             
-            // Show payment methods
             document.getElementById('payment-methods').classList.add('show');
             
-            // Scroll to payment section
             document.getElementById('payment-methods').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Process payment method selection
         function processPayment(method) {
             if (!selectedPlan) return;
             
-            // In a real application, this would redirect to the payment processor
-            // For this demo, we'll show an alert with the selected options
             alert(`Processing ${plans[selectedPlan].name} membership payment via ${method.toUpperCase()}\n\nThis would redirect to the payment gateway in a live site.`);
             
-            // Here's how you would redirect in a real application:
-            // window.location.href = `payment.html?plan=${selectedPlan}&method=${method}`;
         }
 
-        // Filter plans by type
         function filterPlans(type) {
-            // Update active button
             document.querySelectorAll('.btn-group button').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
             
-            // In a real application, this would filter the plans displayed
-            // For this demo, we're just showing all plans
             console.log(`Filtering by: ${type}`);
         }
     </script>

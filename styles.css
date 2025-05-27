@@ -1,4 +1,3 @@
-/* ===== Global Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -59,7 +58,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* ===== Main Content Styles ===== */
 main {
     padding: 2rem;
     max-width: 1200px;
@@ -90,7 +88,6 @@ p {
     margin-bottom: 1rem;
 }
 
-/* ===== Button Styles ===== */
 button, .button {
     background-color: #e74c3c;
     color: white;
@@ -106,7 +103,6 @@ button:hover, .button:hover {
     background-color: #c0392b;
 }
 
-/* ===== Card Styles ===== */
 .class-cards, .trainer-cards, .membership-tiers, .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,7 +122,6 @@ button:hover, .button:hover {
     transform: translateY(-5px);
 }
 
-/* ===== Form Styles ===== */
 form {
     display: grid;
     gap: 1rem;
@@ -148,7 +143,6 @@ input, textarea, select {
     border-radius: 4px;
 }
 
-/* ===== Table Styles ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -189,7 +183,6 @@ footer {
     margin: 0 0.5rem;
 }
 
-/* ===== Utility Classes ===== */
 .highlight {
     background-color: #fffde7;
     transition: background-color 2s;
@@ -201,7 +194,6 @@ footer {
     color: #7f8c8d;
 }
 
-/* ===== Mobile Responsiveness ===== */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -232,8 +224,6 @@ footer {
     }
 }
 
-/* ===== Page-Specific Styles ===== */
-/* Home Page */
 .hero {
     text-align: center;
     padding: 3rem 2rem;
@@ -254,7 +244,6 @@ footer {
     margin-bottom: 2rem;
 }
 
-/* About Page */
 .fun-facts button {
     margin: 1rem 0;
 }
@@ -263,7 +252,6 @@ footer {
     padding-left: 1.5rem;
 }
 
-/* Classes Page */
 .class-filter {
     display: flex;
     gap: 1rem;
@@ -271,14 +259,12 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Trainers Page */
 .trainer-card img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
-/* Membership Page */
 .tier {
     text-align: center;
 }
@@ -305,7 +291,6 @@ footer {
     border-left: 4px solid #e74c3c;
 }
 
-/* Blog Page */
 .blog-card img {
     width: 100%;
     border-radius: 8px;
@@ -338,7 +323,6 @@ footer {
     color: white;
 }
 
-/* Contact Page */
 .contact-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
