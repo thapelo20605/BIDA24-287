@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Blog - Mari Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .author-img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f8f9fa;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+        .tag:hover {
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+        }
+        .newsletter-form {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-activity"></i> MARI FITNESS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-primary text-white py-5">
+        <div class="container py-4 text-center">
+            <h1 class="display-4 fw-bold mb-3">Mari Fitness Blog</h1>
+            <p class="lead">Expert tips, workout hacks, and fitness inspiration</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card blog-card mb-5">
+                    <div class="position-relative">
+                        <img src="images/blog-featured.jpg" class="blog-img" alt="Featured Post">
+                        <span class="badge bg-danger category-badge">Featured</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/trainer-manich.jpg" class="author-img rounded-circle me-2" alt="Author">
+                            <div>
+                                <span class="d-block fw-bold">Manich Ray</span>
+                                <span class="text-muted small">May 15, 2025 · 5 min read</span>
+                            </div>
+                        </div>
+                        <h2 class="card-title">How to Stay Motivated When Progress Feels Slow</h2>
+                        <p class="card-text">We've all been there - putting in the work but not seeing immediate results. Here are 10 strategies our trainers swear by to push through plateaus...</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="tag">Motivation</span>
+                                <span class="tag">Training</span>
+                                <span class="tag">Mindset</span>
+                            </div>
+                            <a href="blog-post.html" class="btn btn-sm btn-outline-danger">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+                    <div class="col">
+                        <div class="card blog-card h-100">
+                            <img src="images/blog-post1.jpg" class="blog-img" alt="Post 1">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images/trainer-cheki.jpg" class="author-img rounded-circle me-2" alt="Author">
+                                    <div>
+                                        <span class="d-block fw-bold small">Cheki Babushka</span>
+                                        <span class="text-muted small">May 10, 2025</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">5 Dance Moves That Burn Serious Calories</h5>
+                                <p class="card-text small">Who says cardio has to be boring? These fun moves will have you sweating in no time...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-warning text-dark small">Cardio</span>
+                                    <a href="blog-post.html" class="btn btn-sm btn-outline-danger">Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card blog-card h-100">
+                            <img src="images/blog-post2.jpg" class="blog-img" alt="Post 2">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images/trainer-moffat.jpg" class="author-img rounded-circle me-2" alt="Author">
+                                    <div>
+                                        <span class="d-block fw-bold small">Moffat Bfax</span>
+                                        <span class="text-muted small">May 5, 2025</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">The 15-Minute HIIT Workout You Can Do Anywhere</h5>
+                                <p class="card-text small">No equipment? No problem. This quick routine will torch calories and boost metabolism...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-danger small">HIIT</span>
+                                    <a href="blog-post.html" class="btn btn-sm btn-outline-danger">Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card blog-card h-100">
+                            <img src="images/blog-post3.jpg" class="blog-img" alt="Post 3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images/trainer-monk.jpg" class="author-img rounded-circle me-2" alt="Author">
+                                    <div>
+                                        <span class="d-block fw-bold small">Monk Fred</span>
+                                        <span class="text-muted small">April 28, 2025</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Yoga Poses for Complete Beginners</h5>
+                                <p class="card-text small">New to yoga? Start with these 8 foundational poses to build strength and flexibility...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success small">Yoga</span>
+                                    <a href="blog-post.html" class="btn btn-sm btn-outline-danger">Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card blog-card h-100">
+                            <img src="images/blog-post4.jpg" class="blog-img" alt="Post 4">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <img src="images/trainer-maps.jpg" class="author-img rounded-circle me-2" alt="Author">
+                                    <div>
+                                        <span class="d-block fw-bold small">Maps Pearl</span>
+                                        <span class="text-muted small">April 22, 2025</span>
+                                    </div>
+                                </div>
+                                <h5 class="card-title">Pre-Workout Nutrition: What to Eat Before Training</h5>
+                                <p class="card-text small">Fuel your workouts properly with these science-backed food choices and timing tips...</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-info text-dark small">Nutrition</span>
+                                    <a href="blog-post.html" class="btn btn-sm btn-outline-danger">Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+           
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="images/logo-icon.png" width="60" class="mb-3" alt="Mari Fitness">
+                        <h5>About Our Blog</h5>
+                        <p class="small">Get expert advice from our trainers, success stories from members, and the latest fitness research - all designed to help you crush your goals.</p>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Categories</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap">
+                            <a href="#" class="tag">Workouts</a>
+                            <a href="#" class="tag">Nutrition</a>
+                            <a href="#" class="tag">Weight Loss</a>
+                            <a href="#" class="tag">Muscle Building</a>
+                            <a href="#" class="tag">Mindset</a>
+                            <a href="#" class="tag">Recovery</a>
+                            <a href="#" class="tag">Success Stories</a>
+                            <a href="#" class="tag">Equipment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Popular Posts</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <img src="images/blog-thumb1.jpg" width="60" class="me-3 rounded" alt="Post thumb">
+                            <div>
+                                <h6 class="mb-0 small">10-Minute Morning Routine</h6>
+                                <small class="text-muted">April 15, 2025</small>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <img src="images/blog-thumb2.jpg" width="60" class="me-3 rounded" alt="Post thumb">
+                            <div>
+                                <h6 class="mb-0 small">Meal Prep for Beginners</h6>
+                                <small class="text-muted">April 8, 2025</small>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <img src="images/blog-thumb3.jpg" width="60" class="me-3 rounded" alt="Post thumb">
+                            <div>
+                                <h6 class="mb-0 small">Strength Training Myths</h6>
+                                <small class="text-muted">April 1, 2025</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card newsletter-form text-white mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Get Fitness Tips</h5>
+                        <p class="card-text small">Subscribe to our newsletter for weekly workouts, nutrition advice, and exclusive content!</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                            </div>
+                            <button type="submit" class="btn btn-light btn-sm w-100">Subscribe</button>
+                        </form>
+                        <small class="d-block mt-2 opacity-75">No spam, just gains. Unsubscribe anytime.</small>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">Follow Us</h5>
+                        <a href="#" class="text-dark mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-dark mx-2"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="bi bi-activity"></i> MARI FITNESS</h5>
+                    <p class="mt-3">Your journey to health starts here. We're more than a gym - we're a community.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="classes.html" class="text-white text-decoration-none">Classes</a></li>
+                        <li class="mb-2"><a href="trainers.html" class="text-white text-decoration-none">Trainers</a></li>
+                        <li class="mb-2"><a href="membership.html" class="text-white text-decoration-none">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Fitness St, Gaborone</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +267 123 4567</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@marifitness.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Opening Hours</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Mon-Fri: 5AM - 10PM</li>
+                        <li class="mb-2">Sat: 7AM - 8PM</li>
+                        <li class="mb-2">Sun: 8AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Mari Fitness. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="privacy.html" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="terms.html" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
