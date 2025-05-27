@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mari Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <i class="bi bi-activity"></i> MARI FITNESS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="classes.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-primary text-white py-5">
+        <div class="container py-4 text-center">
+            <h1 class="display-4 fw-bold mb-3">Our Story</h1>
+            <p class="lead">More than a gym - we're a fitness family</p>
+        </div>
+    </section>
+
+
+    <main class="container my-5">
+        <section class="row align-items-center mb-5 py-4">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4">Why Mari Fitness?</h2>
+                <p class="lead">We're not just a gym—we're your <strong>fitness family</strong>!</p>
+                <p>Founded in 2020, Mari Fitness started with one squat rack and a dream. Now, we're Gaborone's favorite place to transform lives through fitness.</p>
+                
+                <div class="alert alert-warning mt-4">
+                    <button class="btn btn-danger" onclick="revealFact()">
+                        Click for a Fun Gym Fact! <i class="bi bi-emoji-laughing"></i>
+                    </button>
+                    <p id="gymFact" class="mt-2 fw-bold"></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/gym-interior.jpg" alt="Our gym" class="img-fluid rounded shadow">
+            </div>
+        </section>
+
+        <section class="bg-light p-5 rounded-3 mb-5">
+            <h2 class="text-center mb-4 fw-bold">Official "Unofficial" Gym Rules</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-1-circle fs-3"></i>
+                            </div>
+                            <h5 class="card-title">The Drop Rule</h5>
+                            <p class="card-text">If you drop a weight, you owe the group 5 push-ups. <em>(Just kidding... maybe.)</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-2-circle fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Vocal Policy</h5>
+                            <p class="card-text">Grunting is allowed—singing is encouraged (but we judge your song choices).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-3-circle fs-3"></i>
+                            </div>
+                            <h5 class="card-title">Judgment Free</h5>
+                            <p class="card-text">No judgment zone (except for skipping leg day - that's unforgivable).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="fw-bold mb-4 text-center">Meet Our Founders</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="images/founder1.jpg" class="img-fluid rounded-start h-100" alt="Founder" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Manich Ray</h5>
+                                    <p class="text-danger mb-2">Head Trainer & Co-Founder</p>
+                                    <p class="card-text">Former national powerlifting champion who believes fitness should be accessible to everyone.</p>
+                                    <div class="trainer-social">
+                                        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                                        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="images/founder2.jpg" class="img-fluid rounded-start h-100" alt="Founder" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cheki Babushka</h5>
+                                    <p class="text-danger mb-2">Operations & Co-Founder</p>
+                                    <p class="card-text">Fitness entrepreneur with a passion for creating inclusive workout spaces.</p>
+                                    <div class="trainer-social">
+                                        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                                        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-dark text-white p-5 rounded-3 mb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="fw-bold mb-3">Join Our Community</h3>
+                    <p class="mb-0">We're more than just a gym. We're a family of fitness enthusiasts supporting each other's journeys.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="membership.html" class="btn btn-light btn-lg px-4">Become a Member</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+       
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const facts = [
+            "Our members burn enough calories yearly to power a small village!",
+            "The record for most burpees in one session here: 257 (we're still impressed).",
+            "63% of our friendships start with 'Can you spot me?'",
+            "Our yoga mats have seen more tears than a sad movie marathon."
+        ];
+
+        function revealFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("gymFact").textContent = randomFact;
+        }
+    </script>
+</body>
+</html>
